@@ -11,9 +11,9 @@ st.set_page_config(
 
 @st.cache_resource
 def load_model():
-    model         = joblib.load('/Users/elnaraiglik/models/churn_model.joblib')
-    scaler        = joblib.load('/Users/elnaraiglik/models/scaler.joblib')
-    feature_names = joblib.load('/Users/elnaraiglik/models/feature_names.joblib')
+    model         = joblib.load('models/churn_model.joblib')
+    scaler        = joblib.load('models/scaler.joblib')
+    feature_names = joblib.load('models/feature_names.joblib')
     return model, scaler, feature_names
 
 model, scaler, feature_names = load_model()
