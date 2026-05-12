@@ -38,7 +38,7 @@ payment_mode       = st.sidebar.selectbox("Payment Mode",
 marital_status     = st.sidebar.selectbox("Marital Status",
                         ["Single","Married","Divorced"])
 
-predict_btn = st.sidebar.button("🔮 Predict", type="primary", use_container_width=True)
+predict_btn = st.sidebar.button("Predict", type="primary", use_container_width=True)
 
 def make_prediction():
     row = {col: 0.0 for col in feature_names}
@@ -86,8 +86,8 @@ if predict_btn:
 
     # Metrics row
     col1, col2, col3 = st.columns(3)
-    col1.metric("🎯 Churn Probability", f"{prob*100:.1f}%")
-    col2.metric("🛡️ Retention Probability", f"{(1-prob)*100:.1f}%")
+    col1.metric(" Churn Probability", f"{prob*100:.1f}%")
+    col2.metric(" Retention Probability", f"{(1-prob)*100:.1f}%")
     col3.metric("⚠️ Risk Level", f"{emoji} {risk}")
 
     st.markdown("---")
@@ -122,7 +122,7 @@ if predict_btn:
     st.markdown("---")
 
     # Profile summary
-    st.subheader("📊 Customer Profile")
+    st.subheader(" Customer Profile")
     col1, col2 = st.columns(2)
     with col1:
         st.markdown(f"- **Tenure:** {tenure} months")
@@ -143,9 +143,9 @@ else:
     st.markdown("---")
 
     col1, col2, col3 = st.columns(3)
-    col1.metric("🎯 Model Accuracy", "97.96%")
-    col2.metric("📈 ROC-AUC Score", "0.9976")
-    col3.metric("👥 Training Samples", "7,492")
+    col1.metric("- Model Accuracy", "97.96%")
+    col2.metric("- ROC-AUC Score", "0.9976")
+    col3.metric("- Training Samples", "7,492")
 
     st.markdown("---")
     st.subheader("📈 Top Churn Drivers")
