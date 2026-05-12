@@ -143,9 +143,9 @@ else:
     st.markdown("---")
 
     col1, col2, col3 = st.columns(3)
-    col1.metric("- Model Accuracy", "97.96%")
-    col2.metric("- ROC-AUC Score", "0.9976")
-    col3.metric("- Training Samples", "7,492")
+    col1.metric("Model Accuracy", "97.96%")
+    col2.metric("ROC-AUC Score", "0.9976")
+    col3.metric("Training Samples", "7,492")
 
     st.markdown("---")
     st.subheader("📈 Top Churn Drivers")
